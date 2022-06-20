@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Absa.Phonebook.Contactservice</name>
+    </assembly>
+    <members>
+        <member name="M:Absa.Phonebook.Contactservice.Controllers.ContactController.Get">
+            <summary>
+            Retrieves names of all users.
+            </summary>
+            <returns>An ActionResult of collection type User</returns>
+        </member>
+        <member name="M:Absa.Phonebook.Contactservice.Controllers.ContactController.Get(System.Int32)">
+            <summary>
+            Retrieves name of a user using the specified user ID.
+            </summary>
+            <param name="id">The id of the user</param>
+            <returns>An ActionResult of type User</returns>
+            <response code="200">Success: Returns the requested user</response>
+            <response code="400">BadRequest: id passed must be greater than 0 (zero)</response>
+            <response code="404">NotFound: No user was found matching the specified id</response>
+        </member>
+        <member name="M:Absa.Phonebook.Contactservice.Controllers.ContactController.Post(Absa.Phonebook.Contactservice.Models.UserDTO)">
+            <summary>
+            Create a new user on the system.
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:Absa.Phonebook.Contactservice.Controllers.ContactController.Put(System.Int32,Absa.Phonebook.Contactservice.Models.UserDTO)">
+            <summary>
+            Updates an existing user record if found on the system using the specified ID.
+            </summary>
+            <param name="id"></param>
+            <param name="user"></param>
+        </member>
+        <member name="M:Absa.Phonebook.Contactservice.Controllers.ContactController.Patch(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{Absa.Phonebook.Contactservice.Models.UserDTO})">
+            <summary>
+            Updates certain fields of an existing user record if found on the system using the specified ID.
+            </summary>
+            <param name="id"></param>
+            <param name="patchDocument"></param>
+            <remarks>
+            Sample request (this request updates the user's first name) \
+            PATCH /user/id \
+            [ \
+                { \
+                    "op": "replace", \
+                    "path": "/firstname", \
+                    "value": "new first name" \
+                } \
+            ] 
+            </remarks>
+        </member>
+        <member name="M:Absa.Phonebook.Contactservice.Controllers.ContactController.Delete(System.Int32)">
+            <summary>
+            Removes the user from the system. This action is permanent.
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:Absa.Phonebook.Contactservice.Models.Contact.ContactId">
+            <summary>
+            The id of the contact
+            </summary>
+        </member>
+        <member name="P:Absa.Phonebook.Contactservice.Models.Contact.PhoneNumber">
+            <summary>
+            The PhoneNumber of the contact
+            </summary>
+        </member>
+        <member name="P:Absa.Phonebook.Contactservice.Models.Contact.PersonId">
+            <summary>
+            The Foreign Key to the contact owner
+            </summary>
+        </member>
+        <member name="T:Absa.Phonebook.Contactservice.Models.Person">
+            <summary>
+            A Person with Id, FirstName and LastName fields
+            </summary>
+        </member>
+        <member name="P:Absa.Phonebook.Contactservice.Models.Person.PersonId">
+            <summary>
+            The id of the contact
+            </summary>
+        </member>
+        <member name="P:Absa.Phonebook.Contactservice.Models.Person.FirstName">
+            <summary>
+            The FirstName of the contact
+            </summary>
+        </member>
+        <member name="P:Absa.Phonebook.Contactservice.Models.Person.LastName">
+            <summary>
+            The LastName of the contact
+            </summary>
+        </member>
+        <member name="T:Absa.Phonebook.Contactservice.Models.User">
+            <summary>
+            A User with Id, FirstName and LastName fields
+            </summary>
+        </member>
+        <member name="P:Absa.Phonebook.Contactservice.Models.User.Id">
+            <summary>
+            The id of the user
+            </summary>
+        </member>
+        <member name="P:Absa.Phonebook.Contactservice.Models.User.FirstName">
+            <summary>
+            The FirstName of the user
+            </summary>
+        </member>
+        <member name="P:Absa.Phonebook.Contactservice.Models.User.LastName">
+            <summary>
+            The LastName of the user
+            </summary>
+        </member>
+        <member name="T:Absa.Phonebook.Contactservice.Models.UserDTO">
+            <summary>
+            A User with Id, FirstName and LastName fields
+            </summary>
+        </member>
+        <member name="P:Absa.Phonebook.Contactservice.Models.UserDTO.FirstName">
+            <summary>
+            The FirstName of the user
+            </summary>
+        </member>
+        <member name="P:Absa.Phonebook.Contactservice.Models.UserDTO.LastName">
+            <summary>
+            The LastName of the user
+            </summary>
+        </member>
+    </members>
+</doc>

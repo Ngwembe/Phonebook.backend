@@ -1,0 +1,100 @@
+{
+  "Routes": [
+    {
+      "RouteIsCaseSensitive": false,
+      "DownstreamPathTemplate": "/api/weatherForecast",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "49153"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/weatherForecast",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "RouteIsCaseSensitive": false,
+      "DownstreamPathTemplate": "/api/auth/login",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "49153"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/auth/login",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "RouteIsCaseSensitive": false,
+      "DownstreamPathTemplate": "/api/user",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7176"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/user",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "RouteIsCaseSensitive": false,
+      "DownstreamPathTemplate": "/api/user/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7176"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/user/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    {
+      "RouteIsCaseSensitive": false,
+      "DownstreamPathTemplate": "/api/contact/{pageNumber}/{pageSize}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7176"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/contact/{pageNumber}/{pageSize}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "RouteIsCaseSensitive": false,
+      "DownstreamPathTemplate": "/api/contact/{contactId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7176"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/contact/{contactId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "RouteIsCaseSensitive": false,
+      "DownstreamPathTemplate": "/api/contact",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7176"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/contact",
+      "UpstreamHttpMethod": [ "POST" ]
+    }
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5001"
+  }
+}
